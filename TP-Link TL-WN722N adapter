@@ -6,12 +6,13 @@ sudo apt upgrade
 sudo apt install bc
 sudo apt-get install build-essential 
 sudo apt-get install libelf-dev 
+sudo apt install dkms
 
 !Try either of these commands to see which works:
 sudo apt-get install linux-headers-`uname -r`
 sudo apt-get install linux-headers-5.10.0-kali6-amd64
 
-sudo apt install dkms
+
 sudo rmmod r8188eu.ko
 git clone https://github.com/aircrack-ng/rtl8188eus
 cd rtl8188eus
@@ -34,3 +35,9 @@ sudo iwconfig wlan0 mode monitor
 sudo ifconfig wlan0 up
 iwconfig                             
 sudo aireplay-ng --test wlan0
+
+==================================================
+FOR RTL8812AU/RTL8821AU chipsets
+sudo apt install realtek-rtl88xxau-dkms
+reboot now
+==================================================
